@@ -1,0 +1,242 @@
+{
+	"id": "30766242-86e0-4d57-840e-7cc2a3d13a5a",
+	"name": "3er Parcial",
+	"timestamp": "2024-11-24T20:39:30.412Z",
+	"collection_id": "39346479-ddfbac47-0777-4b2f-8e6f-3e908bf6f93b",
+	"folder_id": 0,
+	"environment_id": "39346479-84a56e7c-19b9-4ec4-a9e9-af10f5f95a13",
+	"totalPass": 19,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-11-24T20:39:25.039Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "c8f8a45d-1628-43da-8258-243ee984b776",
+			"name": "Get All Projects",
+			"url": "https://todo.ly/api/projects.json",
+			"time": 1714,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required Content-Type header with value application/json": true,
+				"Validate the structure of the response JSON": true,
+				"Children array is present and contains the expected number of elements": true,
+				"Validate response properties": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required Content-Type header with value application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the structure of the response JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Children array is present and contains the expected number of elements": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1714
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required Content-Type header with value application/json": true,
+					"Validate the structure of the response JSON": true,
+					"Children array is present and contains the expected number of elements": true,
+					"Validate response properties": true
+				}
+			]
+		},
+		{
+			"id": "71285943-71d6-4aa7-a39b-29db0b43d9fe",
+			"name": "Create New Project",
+			"url": "https://todo.ly/api/projects.json",
+			"time": 211,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": false,
+				"Response has the required fields": true,
+				"Content-Type header is present and has the value 'application/json'": true,
+				"Id is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present and has the value 'application/json'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				211
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": false,
+					"Response has the required fields": true,
+					"Content-Type header is present and has the value 'application/json'": true,
+					"Id is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "48ab92fa-1c94-4f28-9c91-8ea56c58e77e",
+			"name": "Get Token",
+			"url": "https://todo.ly/api/authentication/token.json",
+			"time": 218,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Validate the schema of the response body": true,
+				"Verify the presence of Content-Type header with value application/json": true,
+				"TokenString, UserEmail, and ExpirationTime are present in the response": true,
+				"UserEmail is in a valid email format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the schema of the response body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the presence of Content-Type header with value application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TokenString, UserEmail, and ExpirationTime are present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"UserEmail is in a valid email format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				218
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Validate the schema of the response body": true,
+					"Verify the presence of Content-Type header with value application/json": true,
+					"TokenString, UserEmail, and ExpirationTime are present in the response": true,
+					"UserEmail is in a valid email format": true
+				}
+			]
+		},
+		{
+			"id": "40093236-1bff-47a6-9b29-3ae1abf4ecca",
+			"name": "Delete Token",
+			"url": "https://todo.ly/api/authentication/token.json",
+			"time": 201,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type is application/json": true,
+				"Response has the required fields - ErrorMessage and ErrorCode": true,
+				"ErrorMessage is a non-empty string": true,
+				"ErrorCode is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - ErrorMessage and ErrorCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ErrorMessage is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ErrorCode is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				201
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type is application/json": true,
+					"Response has the required fields - ErrorMessage and ErrorCode": true,
+					"ErrorMessage is a non-empty string": true,
+					"ErrorCode is a non-negative integer": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2344,
+	"collection": {
+		"requests": [
+			{
+				"id": "c8f8a45d-1628-43da-8258-243ee984b776",
+				"method": "GET"
+			},
+			{
+				"id": "71285943-71d6-4aa7-a39b-29db0b43d9fe",
+				"method": "POST"
+			},
+			{
+				"id": "48ab92fa-1c94-4f28-9c91-8ea56c58e77e",
+				"method": "GET"
+			},
+			{
+				"id": "40093236-1bff-47a6-9b29-3ae1abf4ecca",
+				"method": "DELETE"
+			}
+		]
+	}
+}

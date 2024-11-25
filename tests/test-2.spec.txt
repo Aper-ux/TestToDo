@@ -1,0 +1,14 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://todo.ly/');
+  await page.locator('.HPHeaderLogin > a').click();
+  await page.locator('#ctl00_MainContent_LoginControl1_TextBoxEmail').click();
+  await page.locator('#ctl00_MainContent_LoginControl1_TextBoxEmail').fill('alex.quiroga.p@ucb.edu.bo');
+  await page.locator('#ctl00_MainContent_LoginControl1_TextBoxPassword').click();
+  await page.locator('#ctl00_MainContent_LoginControl1_TextBoxPassword').fill('AlexQuirogaPass');
+  await page.getByRole('button', { name: 'Submit' }).click();
+  await page.getByRole('cell', { name: 'Proyecto de prueba Alex Quiroga Pérez', exact: true }).click();
+  await page.locator('#SortMenu').click();
+  await page.getByRole('link', { name: 'Sort by Priority' }).click();
+});

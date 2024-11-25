@@ -1,0 +1,27 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://todo.ly/');
+  await page.locator('.HPHeaderLogin > a').click();
+  await page.locator('#ctl00_MainContent_LoginControl1_TextBoxEmail').click();
+  await page.locator('#ctl00_MainContent_LoginControl1_TextBoxEmail').fill('alex.quiroga.p@ucb.edu.bo');
+  await page.locator('#ctl00_MainContent_LoginControl1_TextBoxPassword').click();
+  await page.locator('#ctl00_MainContent_LoginControl1_TextBoxPassword').fill('AlexQuirogaPass');
+  await page.getByRole('button', { name: 'Submit' }).click();
+  await page.getByRole('cell', { name: 'Proyecto de prueba Alex Quiroga Pérez', exact: true }).click();
+  await page.locator('#NewItemContentInput').click();
+  await page.locator('#NewItemContentInput').fill('Item 1 prioridad 3');
+  await page.getByRole('button', { name: 'Add' }).click();
+  await page.getByRole('img', { name: 'Options' }).click();
+  await page.locator('#itemContextMenu').getByText('3').click();
+  await page.locator('#NewItemContentInput').click();
+  await page.locator('#NewItemContentInput').fill('Item 2 prioridad 1');
+  await page.getByRole('button', { name: 'Add' }).click();
+  await page.getByRole('img', { name: 'Options' }).click();
+  await page.locator('#itemContextMenu').getByText('1').click();
+  await page.locator('#NewItemContentInput').click();
+  await page.locator('#NewItemContentInput').fill('Item 3 prioridad 2');
+  await page.getByRole('button', { name: 'Add' }).click();
+  await page.getByRole('img', { name: 'Options' }).click();
+  await page.locator('#itemContextMenu').getByText('2').click();
+});
